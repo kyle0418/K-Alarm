@@ -19,7 +19,25 @@ namespace WindowsFormsApp1
             this.MinimizeBox = false;
             this.TopMost = true;
             this.StartPosition = FormStartPosition.CenterScreen;
-            lbAlarm.Text = time;
+            string hour;
+            string minute;
+            if (time.Split(':')[0].Length < 2)
+            {
+                hour = "0" + time.Split(':')[0];
+            }
+            else
+            {
+                hour = time.Split(':')[0];
+            }
+            if (time.Split(':')[1].Length < 2)
+            {
+                minute = "0" + time.Split(':')[1];
+            }
+            else
+            {
+                minute = time.Split(':')[1];
+            }
+            lbAlarm.Text = hour + ":" + minute;
         }
     }
 }
