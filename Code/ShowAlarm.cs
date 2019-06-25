@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public ShowAlarm(string time)
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.TopMost = true;
