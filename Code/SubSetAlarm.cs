@@ -101,6 +101,7 @@ namespace WindowsFormsApp1
                 }
                 single.SetTime(hour + ":" + minute);
             }
+            this.Close();
         }
     }
 }
