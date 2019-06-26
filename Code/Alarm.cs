@@ -23,6 +23,11 @@ namespace WindowsFormsApp1
             form1 = this;
         }
 
+        public Button AddButton
+        {
+            get { return btAddAlarm; }
+        }
+
         private System.Timers.Timer myTimer;
 
         private void Form1_Load(object sender, EventArgs e)
