@@ -78,6 +78,7 @@ namespace WindowsFormsApp1
                     }
                 }
             }
+            Alarm.form1.AddButton.Location = new Point(116, Alarm.form1.AddButton.Location.Y - 38);
         }
     }
 }
