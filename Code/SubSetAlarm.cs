@@ -84,6 +84,8 @@ namespace WindowsFormsApp1
                 delSetAlarmHandler(sa);
                 height += 38;
                 count++;
+                
+                Alarm.form1.AddButton.Location = new Point(116, height + 5);
             }
             if(this.Text =="Modify")
             {
