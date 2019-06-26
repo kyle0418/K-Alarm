@@ -10,7 +10,7 @@
 
 **Demonstration**:
 
-![image](https://github.com/kyle0418/K-Alarm/blob/master/Code/Test.gif)
+![image](https://github.com/kyle0418/K-Alarm/blob/master/Code/Demonstration.gif)
 
 **Alarm Window**:
 
