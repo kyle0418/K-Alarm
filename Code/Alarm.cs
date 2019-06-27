@@ -109,6 +109,8 @@ namespace WindowsFormsApp1
 
         private void LoadSettedAlarm()
         {
+            bool flag = true;
+            
             List<string> timelist = Settings.Default.TimeSetting.Split(',').ToList<string>();
             List<string> checklist = Settings.Default.CheckSetting.Split(',').ToList<string>();
             int positionY = 0;
@@ -116,6 +118,11 @@ namespace WindowsFormsApp1
             {
                 SingleAlarm singleAlarm = new SingleAlarm(timelist[i], Convert.ToBoolean(checklist[i]));
                 singleAlarm.Location = new Point(0, positionY);
+                if(flag)
+                    singleAlarm.BackColor = Color.White;
+                else
+                    singleAlarm.BackColor = Color.WhiteSmoke;
+                flag = !flag;
                 this.Controls.Add(singleAlarm);
                 positionY += 38;
             }
