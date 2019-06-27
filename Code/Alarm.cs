@@ -123,25 +123,25 @@ namespace WindowsFormsApp1
             AddButton.Location = new Point(116, positionY + 5);
         }
         
-                private void Alarm_Resize(object sender, EventArgs e)
+        private void Alarm_Resize(object sender, EventArgs e)
         {
-            if (this.WindowState == FormWindowState.Minimized)
-            {
-                this.Hide();
-                this.ShowInTaskbar = false;
-                this.notifyIcon.Visible = true;
-            }
+            // if (this.WindowState == FormWindowState.Minimized)
+            // {
+            //     this.Hide();
+            //     this.ShowInTaskbar = false;
+            //     this.notifyIcon.Visible = true;
+            // }
         }
 
         private void notifyIcon_Click(object sender, EventArgs e)
         {
-            if (this.WindowState == FormWindowState.Minimized)
-            {
-                this.Show();
-                this.WindowState = FormWindowState.Normal;
-                notifyIcon.Visible = false;
-                this.ShowInTaskbar = true;
-            }
+            // if (this.WindowState == FormWindowState.Minimized)
+            // {
+            //     this.Show();
+            //     this.WindowState = FormWindowState.Normal;
+            //     notifyIcon.Visible = false;
+            //     this.ShowInTaskbar = true;
+            // }
         }
     }
 }
