@@ -42,6 +42,13 @@
             this.btAddAlarm.UseVisualStyleBackColor = true;
             this.btAddAlarm.Click += new System.EventHandler(this.btAddAlarm_Click);
             // 
+            // notifyIcon
+            // 
+            this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
+            this.notifyIcon.Text = "K-Alarm";
+            this.notifyIcon.Visible = true;
+            this.notifyIcon.Click += new System.EventHandler(this.notifyIcon_Click);
+            // 
             // Alarm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
