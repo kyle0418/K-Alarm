@@ -34,7 +34,7 @@
             // 
             // btAddAlarm
             // 
-            this.btAddAlarm.Location = new System.Drawing.Point(116, 12);
+            this.btAddAlarm.Location = new System.Drawing.Point(116, 5);
             this.btAddAlarm.Name = "btAddAlarm";
             this.btAddAlarm.Size = new System.Drawing.Size(27, 23);
             this.btAddAlarm.TabIndex = 0;
