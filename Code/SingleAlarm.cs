@@ -17,10 +17,23 @@ namespace WindowsFormsApp1
             InitializeComponent();
             this.ContextMenuStrip = cmsOtherOptions;
         }
+        
+        public SingleAlarm(string time, bool isChecked)
+        {
+            InitializeComponent();
+            this.ContextMenuStrip = cmsOtherOptions;
+            this.SettedTime.Text = time;
+            this.OnOrOff.Checked = isChecked;
+        }
 
         public void SetTime(string time)
         {
             this.SettedTime.Text = time;
+        }
+        
+        public string GetTime()
+        {
+            return SettedTime.Text;
         }
 
         private void SingleAlarm_MouseUp(object sender, MouseEventArgs e)
