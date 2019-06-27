@@ -44,10 +44,10 @@
             // 
             // notifyIcon
             // 
-            this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
-            this.notifyIcon.Text = "K-Alarm";
-            this.notifyIcon.Visible = true;
-            this.notifyIcon.Click += new System.EventHandler(this.notifyIcon_Click);
+            // this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
+            // this.notifyIcon.Text = "K-Alarm";
+            // this.notifyIcon.Visible = true;
+            // this.notifyIcon.Click += new System.EventHandler(this.notifyIcon_Click);
             // 
             // Alarm
             // 
