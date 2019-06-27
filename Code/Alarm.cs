@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Forms;
+using WindowsFormsApp1.Properties;
 
 namespace WindowsFormsApp1
 {
@@ -32,6 +33,8 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            LoadSettedAlarm();
+        
             this.myTimer = new System.Timers.Timer(1000);
             this.myTimer.Elapsed += new System.Timers.ElapsedEventHandler(myTimer_Elapsed);
             this.myTimer.AutoReset = true;
@@ -87,6 +90,37 @@ namespace WindowsFormsApp1
         private void myTimer_Elapsed(object sender, ElapsedEventArgs e)
         {
             ToBeAlarm();
+        }
+        
+                private void Alarm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Settings.Default.TimeSetting = "";
+            Settings.Default.CheckSetting = "";
+            foreach (Control control in this.Controls)
+            {
+                if (control is SingleAlarm)
+                {
+                    Settings.Default.TimeSetting += (control as SingleAlarm).GetTime() + ",";
+                    Settings.Default.CheckSetting += (control as SingleAlarm).IsChecked().ToString() + ",";
+                }
+            }
+            Settings.Default.Save();
+        }
+
+        private void LoadSettedAlarm()
+        {
+            List<string> timelist = Settings.Default.TimeSetting.Split(',').ToList<string>();
+            List<string> checklist = Settings.Default.CheckSetting.Split(',').ToList<string>();
+            int positionY =0;
+            for(int i = 0;i< timelist.Count -1;i++)
+            {
+                SingleAlarm singleAlarm = new SingleAlarm(timelist[i], Convert.ToBoolean(checklist[i]));
+                singleAlarm.Location = new Point(0, positionY);
+                this.Controls.Add(singleAlarm);
+                positionY += 38;
+            }
+
+            AddButton.Location = new Point(116, positionY + 5);
         }
     }
 }
