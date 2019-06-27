@@ -111,8 +111,8 @@ namespace WindowsFormsApp1
         {
             List<string> timelist = Settings.Default.TimeSetting.Split(',').ToList<string>();
             List<string> checklist = Settings.Default.CheckSetting.Split(',').ToList<string>();
-            int positionY =0;
-            for(int i = 0;i< timelist.Count -1;i++)
+            int positionY = 0;
+            for(int i = 0;i< timelist.Count-1;i++)
             {
                 SingleAlarm singleAlarm = new SingleAlarm(timelist[i], Convert.ToBoolean(checklist[i]));
                 singleAlarm.Location = new Point(0, positionY);
